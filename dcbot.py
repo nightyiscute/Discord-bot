@@ -7,4 +7,4 @@ async def on_ready(): #啟動on_ready函數
     channel=bot.get_channel(999993244425392231)
     await channel.send('機器人上線啦!') #發送訊息
     print("bot上線拉") #在終端發送訊息
-bot.run('OTk5OTg5MDM2MDQxMTIxNzky.GQWKe1.iKuSBWlABQQcc4SY_peDVzi7zSHE5fbKrhiIV4')
+bot.run('token')
