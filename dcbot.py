@@ -4,14 +4,7 @@ bot=commands.Bot(command_prefix='!')
 
 @bot.event #觸發事件
 async def on_ready(): #啟動on_ready函數
-    print("bot上線拉")
-
-@bot.event
-async def on_member_join(member):
-    print(f'{member}join!')
-
-@bot.event
-async def on_member_remove(member):
-    print(f'{member}leave!')
-
-bot.run('token')
+    channel=bot.get_channel(999993244425392231)
+    await channel.send('機器人上線啦!') #發送訊息
+    print("bot上線拉") #在終端發送訊息
+bot.run('OTk5OTg5MDM2MDQxMTIxNzky.GQWKe1.iKuSBWlABQQcc4SY_peDVzi7zSHE5fbKrhiIV4')
