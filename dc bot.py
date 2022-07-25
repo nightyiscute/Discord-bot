@@ -10,4 +10,5 @@ async def on_ready(): #啟動on_ready函數
 @bot.command()
 async def ping(ctx): #啟動ping函數
     await ctx.send(f'{round(bot.latency*1000)}'"(ms)")
-bot.run('
+bot.run('token')
+
