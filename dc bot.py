@@ -31,7 +31,7 @@ async def web_photo(ctx): #啟動照片函數(wed_photo是名字)
 
 @bot.command()
 async def ask(ctx):
-    await ctx.send('!ping可偵測延遲,!photo可隨機發送圖片,!web_photo可以發送網址,!ask以查看命令列表')
+    await ctx.send("!ping可偵測延遲 \n!photo可隨機發送圖片 \n!web_photo可以發送網址 \n!ask以查看命令列表")
 
 bot.run(jdata['token'])
 
