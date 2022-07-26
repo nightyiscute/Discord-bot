@@ -1,12 +1,15 @@
 import imp
+from lib2to3.pgen2 import token
 import discord
 import json
 import random
+from pixivpy3 import *
 from discord.ext import commands
 
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
 bot=commands.Bot(command_prefix='!')
+REFRESH_TOKEN=token
 
 @bot.event #觸發事件
 async def on_ready(): #啟動on_ready函數
@@ -32,6 +35,7 @@ async def web_photo(ctx): #啟動照片函數(wed_photo是名字)
 @bot.command()
 async def ask(ctx):
     await ctx.send("!ping可偵測延遲 \n!photo可隨機發送圖片 \n!web_photo可以發送網址 \n!ask以查看命令列表")
+
 
 bot.run(jdata['token'])
 
