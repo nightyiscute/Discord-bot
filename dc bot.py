@@ -11,8 +11,16 @@ async def on_ready(): #啟動on_ready函數
     channel=bot.get_channel(int(jdata['channel_id']))
     await channel.send('機器人上線啦!') #發送訊息
     print("bot上線拉") #在終端發送訊息
+
 @bot.command()
 async def ping(ctx): #啟動ping函數
     await ctx.send(f'{round(bot.latency*1000)}'"(ms)")
+    
+@bot.command()    
+async def photo(ctx):
+    photo=discord.File(jdata['photo_neko_miku'])
+    await ctx.send(file=photo)
+
+
 bot.run(jdata['token'])
 
