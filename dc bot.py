@@ -24,5 +24,14 @@ async def photo(ctx): #啟動照片函數(photo是名字)
     photo=discord.File(random_photo) #定義photo=discord的檔案
     await ctx.send (file=photo) #發送檔案
 
+@bot.command()    
+async def web_photo(ctx): #啟動照片函數(wed_photo是名字)
+    random_photo=random.choice (jdata['url_photo']) #定義ramdom_photo
+    await ctx.send(random_photo)
+
+@bot.command()
+async def ask(ctx):
+    await ctx.send('!ping可偵測延遲,!photo可隨機發送圖片,!web_photo可以發送網址,!ask以查看命令列表')
+
 bot.run(jdata['token'])
 
