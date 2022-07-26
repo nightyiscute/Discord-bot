@@ -22,7 +22,7 @@ async def ping(ctx): #啟動ping函數
 async def photo(ctx): #啟動照片函數(photo是名字)
     random_photo=random.choice (jdata['photo']) #定義ramdom_photo
     photo=discord.File(random_photo) #定義photo=discord的檔案
-    await ctx.send (File=photo) #發送檔案
+    await ctx.send (file=photo) #發送檔案
 
 bot.run(jdata['token'])
 
