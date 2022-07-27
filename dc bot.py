@@ -1,4 +1,3 @@
-from ast import main
 from email import message
 import imp
 from lib2to3.pgen2 import token
@@ -25,7 +24,7 @@ async def on_ready(): #啟動on_ready函數
 
 for Filename in os.listdir('./cmds'):
     if Filename.endswith('.py'):
-        bot.load_extension(f'cmds.{Filename[:-3]}')
+        bot.load_extension(f"cmds.{Filename[:-3]}")
 
 
 if __name__=="__main__":
