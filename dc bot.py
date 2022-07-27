@@ -20,16 +20,6 @@ async def on_ready(): #啟動on_ready函數
     print("bot上線拉") #在終端發送訊息
 
 
-@bot.command()    
-async def photo(ctx): #啟動照片函數(photo是名字)
-    random_photo=random.choice (jdata['photo']) #定義ramdom_photo
-    photo=discord.File(random_photo) #定義photo=discord的檔案
-    await ctx.send (file=photo) #發送檔案
-
-@bot.command()    
-async def web_photo(ctx): #啟動照片函數(wed_photo是名字)
-    random_photo=random.choice (jdata['url_photo']) #定義ramdom_photo
-    await ctx.send(random_photo)
 
     
 bot.run(jdata['token'])
