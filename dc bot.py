@@ -26,6 +26,22 @@ for Filename in os.listdir('./cmds'):
     if Filename.endswith('.py'):
         bot.load_extension(f"cmds.{Filename[:-3]}")
 
+@bot.command()
+async def load(ctx,extension):
+    bot.load_extension(f'cmds.{extension}')
+    await ctx.send(f'Loaded {extension} done.')
+
+@bot.command()
+async def unload(ctx,extension):
+    bot.unload_extension(f'cmds.{extension}')
+    await ctx.send(f'Unloaded {extension} done.')
+
+@bot.command()
+async def reload(ctx,extension):
+    bot.reload_extension(f'cmds.{extension}')
+    await ctx.send(f'Re-Loaded {extension} done.')
+
+
 
 if __name__=="__main__":
     bot.run(jdata['token'])
