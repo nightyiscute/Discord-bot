@@ -7,8 +7,8 @@ import random
 
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
-class react(Cog_Extantion):
 
+class react(Cog_Extantion):
     @commands.command()    
     async def photo(self,ctx): #啟動照片函數(photo是名字)
         random_photo=random.choice (jdata['photo']) #定義ramdom_photo
