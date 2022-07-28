@@ -8,7 +8,7 @@ class event(Cog_Extantion):
     @commands.Cog.listener()
     async def on_message(self,msg):
         if msg.content=='hi':
-            await msg.channel.send('hi三小噁男')
+            await msg.channel.send('hi 你好 你很可愛')
 
 
 
