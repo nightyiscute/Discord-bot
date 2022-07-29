@@ -5,11 +5,11 @@ from core.classes import Cog_Extantion
 
 class event(Cog_Extantion): 
     @commands.Cog.listener()
-    async def on_message(self,*msg):
+    async def on_message(self,msg):
         if msg.author==self.bot.user:
                 return
         if msg.content.startswith('n'): 
-            await msg.channel.send(f'https://nhentai.net/g/{msg}/')
+            await msg.channel.send(f'https://nhentai.net/g/{msg.content}/')
             
 
 def setup(bot):
