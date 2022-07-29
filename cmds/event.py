@@ -11,14 +11,6 @@ class event(Cog_Extantion):
         if msg.content.startswith('n'): 
             await msg.channel.send(f'https://nhentai.net/g/{msg}/')
             
-                
-
-
-        
-
-
-
-
 
 def setup(bot):
     bot.add_cog(event(bot))
