@@ -8,7 +8,7 @@ class event(Cog_Extantion):
     async def on_message(self,msg):
        
         if msg.content.startswith('n') and msg.author != self.bot.user:
-            tmp=message.content.split("",2)
+            tmp=msg.content.split("",2)
             if len(tmp)==1:
                 await msg.channel.send('hi 你好 你很可愛')
             else:
