@@ -9,7 +9,7 @@ class event(Cog_Extantion):
         if msg.author==self.bot.user:
                 return
         if msg.content.startswith('n'): 
-            await msg.channel.send(f'https://nhentai.net/g/{msg.content}/')
+            await msg.channel.send(f'https://nhentai.net/g/{msg.content[1:]}/')
             
 
 def setup(bot):
