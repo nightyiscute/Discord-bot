@@ -13,7 +13,7 @@ class event(Cog_Extantion):
         if msg.content=="hi":
             await msg.channel.send(f"Hi Hi你好{msg.author.display_name}")
         if self.bot.user in msg.mentions:
-            await msg.channel.send(f"tag三小{msg.author.mention}")
+            await msg.channel.send(f"tag三小{msg.author.display_name}")
 
     
 
