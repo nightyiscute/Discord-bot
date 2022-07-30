@@ -11,8 +11,9 @@ class event(Cog_Extantion):
         if msg.content.startswith('n'): 
             await msg.channel.send(f'https://nhentai.net/g/{msg.content[1:]}/')
         if msg.content=="hi":
-            await msg.channel.send(f"Hi Hi你好{msg.author[:-4]}")
-
+            await msg.channel.send(f"Hi Hi你好{msg.author.display_name}")
+        if msg.content=="@偶好可愛":
+            await msg.channal.sent(f"tag三小{msg.author.mention}")
 
 def setup(bot):
     bot.add_cog(event(bot))
