@@ -1,10 +1,5 @@
-from email import message
-import imp
-from lib2to3.pgen2 import token
-from unicodedata import name
 import discord
 import json
-import random
 from pixivpy3 import *
 from discord.ext import commands
 import os
@@ -13,7 +8,7 @@ with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,
     jdata=json.load(jfile)
 
 bot=commands.Bot(command_prefix='!')
-REFRESH_TOKEN=token
+REFRESH_TOKEN=jdata['token']
 cilent=discord.Client()
 
 @bot.event #觸發事件
