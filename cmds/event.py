@@ -4,7 +4,7 @@ from discord.ext import commands
 from core.classes import Cog_Extantion
 
 class event(Cog_Extantion):
-    @commands.Cog.listener
+    @commands.Cog.listener()
     async def on_message(self,msg):       
         if msg.author==self.bot.user:
             return  
