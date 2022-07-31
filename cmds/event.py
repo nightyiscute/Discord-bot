@@ -13,7 +13,8 @@ class event(Cog_Extantion):
             await msg.channel.send(f"Hi Hi你好{msg.author.display_name}")
         if self.bot.user in msg.mentions:
             await msg.channel.send(f"tag三小{msg.author.display_name}")
-
+        if msg.content.startswith('禁漫'):
+            await msg.channel.send(f'https://18comic.vip/photo/{msg.content[2:]}')
     
 
 def setup(bot):
