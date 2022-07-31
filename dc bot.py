@@ -7,7 +7,7 @@ import os
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
 
-REFRESH_TOKEN = "Dv72iY_Mv2vqfcAhSB98x9K_0W85PYOy7h3t9PLe_Aw"
+REFRESH_TOKEN="Dv72iY_Mv2vqfcAhSB98x9K_0W85PYOy7h3t9PLe_Aw"
 bot=commands.Bot(command_prefix='!')
 cilent=discord.Client()
 api= AppPixivAPI()
