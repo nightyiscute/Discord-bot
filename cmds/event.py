@@ -7,7 +7,7 @@ import json
 
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
-    
+
 class event(Cog_Extantion):
     @commands.Cog.listener()
     async def on_message(self,msg):       
@@ -22,7 +22,8 @@ class event(Cog_Extantion):
             await msg.channel.send(f"tag三小{msg.author.display_name}")
         if msg.content.startswith('禁漫'):
             await msg.channel.send(f'https://18comic.vip/photo/{msg.content[2:]}')
-    
+        if msg.content.startswith('say'):
+            await msg.channel.send(f'{msg.content[3:]}')
 
 def setup(bot):
     bot.add_cog(event(bot))
