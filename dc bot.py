@@ -10,8 +10,14 @@ with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,
 REFRESH_TOKEN="Dv72iY_Mv2vqfcAhSB98x9K_0W85PYOy7h3t9PLe_Aw"
 bot=commands.Bot(command_prefix='!')
 cilent=discord.Client()
-api= AppPixivAPI()
-api.auth(refresh_token=REFRESH_TOKEN)
+
+def recommend():
+    api= AppPixivAPI()
+    api.auth(refresh_token=REFRESH_TOKEN)
+    
+
+
+
 
 
 
@@ -39,8 +45,6 @@ async def unload(ctx,extension):
 async def reload(ctx,extension):
     bot.reload_extension(f'cmds.{extension}')
     await ctx.send(f'Re-Loaded {extension} done.')
-
-
 
 if __name__=="__main__":
     bot.run(jdata['token'])
