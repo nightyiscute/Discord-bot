@@ -14,11 +14,6 @@ cilent=discord.Client()
 def recommend():
     api= AppPixivAPI()
     api.auth(refresh_token=REFRESH_TOKEN)
-    
-
-
-
-
 
 
 @bot.event #觸發事件
