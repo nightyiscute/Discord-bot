@@ -48,8 +48,8 @@ class Main(Cog_Extantion):
             word="小心血光之災!"
         embed=discord.Embed(title=random_luck,  color=lcolor,timestamp=datetime.datetime.now())
         embed.set_author(name="今日運氣")
-        embed.add_field(name=word,value="", inline=False)
-        embed.set_footer(text=f"{ctx.author.display_name}占於")
+        embed.add_field(name=word,value="以上就是占卜結果", inline=False)
+        embed.set_footer(text=f"{ctx.author.display_name}占卜於")
         await ctx.send(embed=embed)
 
 def setup(bot):
