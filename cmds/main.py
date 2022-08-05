@@ -45,12 +45,11 @@ class Main(Cog_Extantion):
             word="今天走路要看路喔，小心踩到狗屎"
         if random_luck=="大凶":
             color=0xff0000
-            word=""
+            word="小心血光之災!"
         embed=discord.Embed(title=random_luck, description="好康的", color=color,timestamp=datetime.datetime.now())
         embed.set_author(name="今日運氣")
         embed.add_field(name=word, inline=False)
         embed.set_footer(text=f"{ctx.author.display_name}占於")
-        
         await ctx.send(embed=embed)
 
 def setup(bot):
