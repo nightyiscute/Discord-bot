@@ -46,7 +46,7 @@ class Main(Cog_Extantion):
         if random_luck=="大凶":
             lcolor=0xff0000
             word="小心血光之災!"
-        embed=discord.Embed(title=random_luck, description="", color=lcolor,timestamp=datetime.datetime.now())
+        embed=discord.Embed(title=random_luck,  color=lcolor,timestamp=datetime.datetime.now())
         embed.set_author(name="今日運氣")
         embed.add_field(name=word,value="", inline=False)
         embed.set_footer(text=f"{ctx.author.display_name}占於")
