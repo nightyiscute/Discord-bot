@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from core.classes import Cog_Extantion
-
+import datetime
 
 
 class Main(Cog_Extantion):
@@ -16,15 +16,14 @@ class Main(Cog_Extantion):
 
     @commands.command()
     async def em(self,ctx):
-        embed=discord.Embed(title="text", url="https://youtu.be/dQw4w9WgXcQ", description="好康的", color=0x00ff6e)
-        embed.set_author(name="owo", url="https://youtu.be/dQw4w9WgXcQ")
+        embed=discord.Embed(title=f"{ctx.author.display_name}", url="https://youtu.be/dQw4w9WgXcQ", description="好康的", color=0x00ff6e,timestamp=datetime.datetime.now())
+        embed.set_author(name="information", url="https://youtu.be/dQw4w9WgXcQ")
         embed.add_field(name="11", value="1", inline=False)
         embed.add_field(name="22", value="2", inline=False)
-        embed.set_footer(text="dfdfs")
+        embed.set_footer(text=f"{ctx.author.display_name}寫於")
         await ctx.send(embed=embed)
 
 
-    
 def setup(bot):
     bot.add_cog(Main(bot))
 
