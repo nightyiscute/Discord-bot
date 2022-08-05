@@ -32,21 +32,21 @@ class Main(Cog_Extantion):
     async def luck(self,ctx):
         random_luck=random.choice(jdata["luck"])
         if random_luck=="大吉":
-            color=0x00ff1e
+            lcolor=0x00ff1e
             word="恭喜!今天適合買大樂透"
         if random_luck=="吉":
-            color=0x00e1ff
+            lcolor=0x00e1ff
             word="恭喜!今天會有小確幸"
         if random_luck=="中":
-            color=0xfbff00
+            lcolor=0xfbff00
             word="今天運氣不好也不壞，是個平常的一天呢"
         if random_luck=="兇":
-            color=0xff8800
+            lcolor=0xff8800
             word="今天走路要看路喔，小心踩到狗屎"
         if random_luck=="大凶":
-            color=0xff0000
+            lcolor=0xff0000
             word="小心血光之災!"
-        embed=discord.Embed(title=random_luck, description="好康的", color=color,timestamp=datetime.datetime.now())
+        embed=discord.Embed(title=random_luck, description="好康的", color=lcolor,timestamp=datetime.datetime.now())
         embed.set_author(name="今日運氣")
         embed.add_field(name=word, inline=False)
         embed.set_footer(text=f"{ctx.author.display_name}占於")
