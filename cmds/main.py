@@ -52,6 +52,11 @@ class Main(Cog_Extantion):
         embed.set_footer(text=f"{ctx.author.display_name}占卜於")
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def clean(self,ctx,num:int):
+        await ctx.channel.purge(limit=num+1)
+
+
 def setup(bot):
     bot.add_cog(Main(bot))
 
