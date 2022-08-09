@@ -60,6 +60,10 @@ class Main(Cog_Extantion):
     async def dice(self,ctx):
         random_dice=random.choice(jdata["dice"])
         await ctx.send(random_dice)
+    
+    @commands.command()
+    async def time(self,ctx):
+        await ctx.send(datetime.datetime.now())
 
 def setup(bot):
     bot.add_cog(Main(bot))
