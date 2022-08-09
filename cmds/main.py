@@ -55,6 +55,7 @@ class Main(Cog_Extantion):
     @commands.command()
     async def clean(self,ctx,num:int):
         await ctx.channel.purge(limit=num+1)
+    
     @commands.command()
     async def dice(self,ctx):
         random_dice=random.choice(jdata["dice"])
