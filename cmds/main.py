@@ -65,6 +65,13 @@ class Main(Cog_Extantion):
     async def time(self,ctx):
         await ctx.send(f"現在是{datetime.datetime.now()}")
 
+    @commands.command()
+    async def n(self,ctx,msg):
+        await ctx.send(f'https://nhentai.net/g/{msg}/')
+
+    @commands.command()
+    async def 禁漫(self,ctx,msg):
+        await ctx.send(f'https://18comic.vip/photo/{msg}')
 def setup(bot):
     bot.add_cog(Main(bot))
 
