@@ -71,6 +71,7 @@ class Main(Cog_Extantion):
     @commands.command()
     async def 禁漫(self,ctx,msg):
         await ctx.send(f'https://18comic.vip/photo/{msg}')
+
 def setup(bot):
     bot.add_cog(Main(bot))
 
