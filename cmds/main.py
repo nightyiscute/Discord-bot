@@ -62,7 +62,7 @@ class Main(Cog_Extantion):
     
     @commands.command()
     async def time(self,ctx):
-        await ctx.send(f"現在是{datetime.datetime.now()}")
+        await ctx.send(f"現在是{datetime.datetime.now().strftime('%Y %m %d %H %M')}")
 
     @commands.command()
     async def n(self,ctx,msg):
