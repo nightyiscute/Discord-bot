@@ -3,18 +3,22 @@ import json
 from pixivpy3 import *
 from discord.ext import commands
 import os
-
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
 
 REFRESH_TOKEN="Dv72iY_Mv2vqfcAhSB98x9K_0W85PYOy7h3t9PLe_Aw"
-bot=commands.Bot(command_prefix='!')
-cilent=discord.Client()
+intents=discord.Intents.all()
+bot=commands.Bot(command_prefix='!',intents=intents)
+tree=bot.tree
+
 
 def recommend():
     api= AppPixivAPI()
     api.auth(refresh_token=REFRESH_TOKEN)
 
+@tree.command(name='test',description='just text')
+async def owo():
+    await channel.sent('owo')
 
 @bot.event #觸發事件
 async def on_ready(): #啟動on_ready函數
