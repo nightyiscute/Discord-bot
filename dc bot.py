@@ -17,7 +17,8 @@ def recommend():
     api.auth(refresh_token=REFRESH_TOKEN)
 
 @tree.command(name='test',description='just text')
-async def owo():
+async def test():
+    channel=bot.get_channel(int(jdata['channel_id']))
     await channel.sent('owo')
 
 @bot.event #觸發事件
