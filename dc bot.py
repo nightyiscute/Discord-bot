@@ -12,14 +12,15 @@ bot=commands.Bot(command_prefix='!',intents=intents)
 tree=bot.tree
 
 
+
 def recommend():
     api= AppPixivAPI()
     api.auth(refresh_token=REFRESH_TOKEN)
 
 @tree.command(name='test',description='just text')
-async def test():
-    channel=bot.get_channel(int(jdata['channel_id']))
-    await channel.sent('owo')
+async def test(interaction: discord.Interaction):
+    """hello!"""
+    await interaction.response.send_message('hihi')
 
 @bot.event #觸發事件
 async def on_ready(): #啟動on_ready函數
