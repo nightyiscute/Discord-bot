@@ -4,14 +4,16 @@ from core.classes import Cog_Extantion
 import datetime
 import random
 import json
+from discord import app_commands
 
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
 
 class Main(Cog_Extantion):
-    @commands.command()
-    async def ping(self,ctx): #啟動ping函數
-        await ctx.send(f'{round(self.bot.latency*1000)}'"(ms)") #發送延遲毫秒數
+
+    @app_commands.command(name="ping")
+    async def ping(self,ctx: discord.Interaction): #啟動ping函數
+        await ctx.response.send_message(f"{round(self.bot.latency*1000)}(ms)") #發送延遲毫秒數
 
     @commands.command()
     async def say(self,ctx,*,msg):
@@ -72,6 +74,6 @@ class Main(Cog_Extantion):
     async def 禁漫(self,ctx,msg):
         await ctx.send(f'https://18comic.vip/photo/{msg}')
 
-def setup(bot):
-    bot.add_cog(Main(bot))
+async def setup(bot: commands.Bot):
+    await bot.add_cog(Main(bot))
 

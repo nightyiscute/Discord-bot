@@ -50,5 +50,5 @@ class task(Cog_Extantion):
 
 
 
-def setup(bot):   
-    bot.add_cog(task(bot))      
+async def setup(bot):   
+    await bot.add_cog(task(bot))      

@@ -18,5 +18,5 @@ class react(Cog_Extantion):
     async def web_photo(self,ctx): #啟動照片函數(wed_photo是名字)
         random_photo=random.choice (jdata['url_photo']) #定義ramdom_photo
         await ctx.send(random_photo)
-def setup(bot):
-    bot.add_cog(react(bot))
+async def setup(bot):
+    await bot.add_cog(react(bot))
