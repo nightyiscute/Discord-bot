@@ -18,5 +18,5 @@ class event(Cog_Extantion):
         if self.bot.user in msg.mentions:
             await msg.channel.send(f"tag三小{msg.author.display_name}")
         
-def setup(bot):
-    bot.add_cog(event(bot))
+async def setup(bot):
+    await bot.add_cog(event(bot))
