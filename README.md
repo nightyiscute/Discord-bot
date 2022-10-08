@@ -2,14 +2,7 @@
 ==============
 
 ###Usage
-add a file named `setting.json` and add `{"token":"your bot token"}` in the file.
-```bash
-cat > setting.json << 'EOF'
-{
-	"token" : "your bot token"
-}
-EOF
-```
+add the token of your bot to `setting.json`
 ###Docker
 Run the script or tyoe them yourself
 ```bash
