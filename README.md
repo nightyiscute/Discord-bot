@@ -1,18 +1,18 @@
  Discord Bot
 ==============
 
-###Usage
+### Usage
 add the token of your bot to `setting.json`
-###Docker
+### Docker
 Run the script or tyoe them yourself
 ```bash
 ./docker.sh
 ```
-#####Make docker image
+##### Make docker image
 ```bash
 docker build -t <image name> .
 ```
-#####Run container
+##### Run container
 ```bash
 docker service create -d \
 --replicas=4 \
