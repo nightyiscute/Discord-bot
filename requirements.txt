@@ -1,0 +1,2 @@
+discord.py >= 2.0
+pixivpy3 >= 3.7.2
