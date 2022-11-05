@@ -45,12 +45,9 @@ async def unload(ctx,extension):
 
 @bot.command() #重載檔案
 async def reload(ctx,extension):
+    os.system("git pull")
     bot.reload_extension(f'cmds.{extension}')
     await ctx.send(f'Re-Loaded {extension} done.')
-    
-if os.system("git pull")==0:
-    async def reload(ctx,extension):
-        bot.reload_extension(f'cmds.{extension}')
     
 async def main(): #啟用Cog
     async with bot:
