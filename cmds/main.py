@@ -42,7 +42,7 @@ class Main(Cog_Extantion):
             random_luck="吉"
         if 90<random_int:
             random_luck="大吉"
-            
+
         if random_luck=="大吉":
             lcolor=0x00ff1e
             word="恭喜!今天適合買大樂透"
@@ -88,6 +88,7 @@ class Main(Cog_Extantion):
     @commands.command()
     async def fuck(self,ctx):
         await ctx.send(f"{ctx.author.display_name}你連一個discord bot都想幹?")
+
 
 async def setup(bot: commands.Bot): #匯入Cog
     await bot.add_cog(Main(bot))
