@@ -31,7 +31,18 @@ class Main(Cog_Extantion):
 
     @commands.command() #運氣指令
     async def luck(self,ctx):
-        random_luck=random.choice(jdata["luck"])
+        random_int=random.randint(0,100)
+        if random_int<10:
+            random_luck="大凶"
+        if 10<=random_int<30:
+            random_luck="兇"
+        if 30<=random_int<70:
+            random_luck="中"
+        if 70<random_int<90:
+            random_luck="吉"
+        if 90<random_int:
+            random_luck="大吉"
+            
         if random_luck=="大吉":
             lcolor=0x00ff1e
             word="恭喜!今天適合買大樂透"
@@ -73,6 +84,10 @@ class Main(Cog_Extantion):
     @commands.command() #禁漫指令
     async def 禁漫(self,ctx,msg):
         await ctx.send(f'https://18comic.vip/photo/{msg}')
+    
+    @commands.command()
+    async def fuck(self,ctx):
+        await ctx.send(f"{ctx.author.display_name}你連一個discord bot都想幹?")
 
 async def setup(bot: commands.Bot): #匯入Cog
     await bot.add_cog(Main(bot))
