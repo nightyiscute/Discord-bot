@@ -6,7 +6,6 @@ from discord.ext import commands
 from discord import app_commands
 from discord.app_commands import Choice
 import os
-
 global jdata
 with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,模式是read,命名為jfile
     jdata=json.load(jfile)
