@@ -38,9 +38,9 @@ class Main(Cog_Extantion):
             random_luck="兇"
         if 30<=random_int<70:
             random_luck="中"
-        if 70<random_int<90:
+        if 70<=random_int<90:
             random_luck="吉"
-        if 90<random_int:
+        if 90<=random_int:
             random_luck="大吉"
 
         if random_luck=="大吉":
