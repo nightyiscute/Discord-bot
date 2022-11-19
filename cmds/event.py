@@ -16,7 +16,7 @@ class event(Cog_Extantion):
             random_talk=random.choice(jdata['talk'])
             await msg.channel.send(random_talk)
         if self.bot.user in msg.mentions:
-            WhyTag=[f"tag三小{msg.author.display_name}","有什麼事嗎?",f"在警告你一次{msg.author.display_name}不要再tag偶了!"]
+            WhyTag=[f"tag三小{msg.author.display_name}","有什麼事嗎?",f"再警告你一次{msg.author.display_name}不要再tag偶了!"]
             random_talk=random.choice(WhyTag)
             await msg.channel.send(random_talk)
         
