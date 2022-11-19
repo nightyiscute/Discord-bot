@@ -2,7 +2,9 @@
 ==============
 
 ### Usage
-add the token of your bot to `setting.json`
+Add the token of your bot to `setting.json`
+or
+Set `TOKEN` environment variable.
 ### Docker
 Run the script or tyoe them yourself
 ```bash

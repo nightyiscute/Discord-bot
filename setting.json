@@ -1,46 +1,10 @@
 {
     "token": "",
-    "channel_id": "999993244425392231",
-    "url_photo": [
-        "https://www.pixiv.net/artworks/99880993",
-        "https://www.pixiv.net/artworks/96842607",
-        "https://www.pixiv.net/artworks/96490667",
-        "https://www.pixiv.net/artworks/97077267",
-        "https://www.pixiv.net/artworks/91687530",
-        "https://www.pixiv.net/artworks/93170730",
-        "https://www.pixiv.net/artworks/97224487"
-    ],
-    "talk": [
-        "Hi Hi\u4f60\u597d",
-        "\u5403\u98fd\u6c92",
-        "hi\u4e09\u5c0f",
-        "\u65e9\u5b89",
-        "\u665a\u5b89"
-    ],
-    "luck": [
-        "\u5927\u5409",
-        "\u5409",
-        "\u5409",
-        "\u4e2d",
-        "\u4e2d",
-        "\u4e2d",
-        "\u4e2d",
-        "\u5147",
-        "\u5147",
-        "\u5927\u51f6"
-    ],
-    "dice": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6"
-    ],
-    "time": "2349",
-    "goodmorning": [
-        "\u65e9\u5b89",
-        "\u65e9\u5b89\u4f60\u597d",
-        "\u304a\u306f\u3088\u3046\u3054\u3056\u3044\u307e\u3059"
-    ]
+    "channel_id": "",
+    "url_photo": "",
+    "talk": "",
+    "luck": "",
+    "dice":"",
+    "goodmorning": 
+        ""
 }
