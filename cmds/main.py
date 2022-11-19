@@ -88,6 +88,8 @@ class Main(Cog_Extantion):
     @commands.command()
     async def fuck(self,ctx):
         await ctx.send(f"{ctx.author.display_name}你連一個discord bot都想幹?")
+    
+    
 
 
 async def setup(bot: commands.Bot): #匯入Cog
