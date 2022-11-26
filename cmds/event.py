@@ -19,6 +19,11 @@ class event(Cog_Extantion):
             WhyTag=[f"tag三小{msg.author.display_name}","有什麼事嗎?",f"在警告你一次{msg.author.display_name}不要再tag偶了!"]
             random_talk=random.choice(WhyTag)
             await msg.channel.send(random_talk)
+        if msg.content=="fuck":
+            a1=random.randint(1,100)
+            if a1>80:
+                await msg.channel.send("別罵髒話")
+            
         
 async def setup(bot):
     await bot.add_cog(event(bot))
