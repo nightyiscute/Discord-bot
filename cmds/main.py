@@ -65,7 +65,7 @@ class Main(Cog_Extantion):
         await ctx.send(embed=embed)
 
     @commands.command() #防刷屏指令
-    async def clean(self,ctx,num:int):
+    async def clear(self,ctx,num:int):
         await ctx.channel.purge(limit=num+1)
     
     @commands.command() #骰子指令
