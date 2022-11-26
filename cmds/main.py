@@ -80,6 +80,11 @@ class Main(Cog_Extantion):
     @commands.command() #n網指令
     async def n(self,ctx,msg):
         await ctx.send(f'https://nhentai.net/g/{msg}/')
+    
+    @commands.command()
+    async def n_random(ctx,num):
+        num=random.randint(1,999999)
+        await ctx.send(f'https://nhentai.net/g/{num}/')
 
     @commands.command() #禁漫指令
     async def 禁漫(self,ctx,msg):
