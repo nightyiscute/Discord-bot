@@ -11,9 +11,9 @@ with open('setting.json',mode='r',encoding='utf8')as jfile: #打開setting.json,
 
 class Main(Cog_Extantion):
 
-    @app_commands.command(name="ping") #ping指令
+    @commands.command() #ping指令
     async def ping(self,ctx: discord.Interaction): #啟動ping函數
-        await ctx.response.send_message(f"{round(self.bot.latency*1000)}(ms)") #發送延遲毫秒數
+        await ctx.send(f"{round(self.bot.latency*1000)}(ms)") #發送延遲毫秒數
 
     @commands.command() #匿名講話指令
     async def say(self,ctx,*,msg):
